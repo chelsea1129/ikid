@@ -2,18 +2,18 @@
 //  AppDelegate.swift
 //  ikid
 //
-//  Created by Qiaosi Wang on 2/4/18.
+//  Created by Qiaosi Wang on 2/5/18.
 //  Copyright © 2018 Qiaosi Chelsea Wang. All rights reserved.
 //
 
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true

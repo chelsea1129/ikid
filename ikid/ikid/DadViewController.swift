@@ -1,21 +1,36 @@
 //
-//  FirstBackViewController.swift
+//  DadViewController.swift
 //  ikid
 //
-//  Created by Qiaosi Wang on 2/5/18.
+//  Created by Qiaosi Wang on 2/6/18.
 //  Copyright © 2018 Qiaosi Chelsea Wang. All rights reserved.
 //
 
 import UIKit
 
-class FirstBackViewController: UIViewController {
+class DadViewController: UIViewController {
 
+    @IBOutlet weak var joke: UILabel!
+    var isFlipped = false
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func btnFlip(_ sender: Any) {
+        if isFlipped{
+            isFlipped = false
+            self.joke.text = "What does a zombie vegetarian eat?"
+            UIView.transition(with: joke, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+        } else {
+            isFlipped = true
+            self.joke.text = "GRRAAIINNNNS"
+            UIView.transition(with: joke, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
